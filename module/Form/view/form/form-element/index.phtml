@@ -3,9 +3,15 @@ WELCOM TO MODULE FORM!
 <?php
 $form = $this->form;
 $fullname = $form->get('fullname');
-$hidden = $form->get('hidden_input');
-$age = $form->get('number_input');
-$email = $form->get('email_input');
+$hidden = $form->get('hidden');
+$age = $form->get('number');
+$email = $form->get('email');
+$password = $form->get('password');
+$gender = $form->get('gender');
+$select = $form->get('select');
+$textarea = $form->get('message');
+$file = $form->get('file');
+$checkbox = $form->get('checkbox');
 $form->prepare();
 ?>
 <div class="row">
@@ -17,6 +23,12 @@ $form->prepare();
             <?= $this->formRow($hidden); ?>
             <?= $this->formRow($age); ?>
             <?= $this->formRow($email); ?>
+            <?= $this->formRow($password); ?>
+            <?= $this->formRow($gender); ?>
+            <?= $this->formRow($select); ?>
+            <?= $this->formRow($textarea); ?>
+            <?= $this->formRow($file); ?>
+            <?= $this->formRow($checkbox); ?>
             <?= $this->form()->closeTag($form); //</form>
             ?>
         </div>
