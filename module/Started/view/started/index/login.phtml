@@ -1,0 +1,13 @@
+<?php
+echo $this-> headTitle('Login Page');
+echo $action;
+echo "<br>";
+echo $this->action;
+echo "<br>";
+echo $this->id;
+echo "<br>";
+// remove tất cả các tag không thuộc HTML để tránh trường hợp người dùng truyền data gây hại cho website
+echo $this -> escapeHtml($action);
+
+
+
