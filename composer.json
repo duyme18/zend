@@ -15,7 +15,8 @@
         "zendframework/zend-mvc": "^3.1.1",
         "zfcampus/zf-development-mode": "^3.2",
         "zendframework/zend-form": "^2.14",
-        "twbs/bootstrap": "^4.4"
+        "twbs/bootstrap": "^4.4",
+        "zendframework/zend-mvc-i18n": "^1.1"
     },
     "autoload": {
         "psr-4": {

@@ -25,5 +25,46 @@ class FormElement extends Form
         ]);
 
         $this->add($fullname);
+
+        //hidden
+        $hidden = new Element('hidden_input');
+        $hidden->setAttributes([
+            'type' => 'hidden',
+            'value' => 'Zend Framework'
+        ]);
+        $this->add($hidden);
+
+        //number
+        $age = new Element\Number('number_input');
+        $age->setLabel('Chọn tuổi: ');
+        $age->setLabelAttributes([
+            'id' => 'age',
+            'class' => 'control-lable'
+        ]);
+        $age->setAttributes([
+            'min' => 10,
+            'max' => 50,
+            'id' => 'age',
+            'class' => 'form-control',
+            'value' => 20
+        ]);
+
+        $this->add($age);
+
+        //email
+        $email = new Element\Email('email_input');
+        $email->setLabel('Nhập email: ')
+            ->setLabelAttributes([
+                'id' => 'email',
+                'class' => 'control-lable'
+            ]);
+        $email->setAttribute('class', 'form-control');
+        $email->setAttributes([
+            'placeholder' => "Nhập email:",
+            'id' => 'email',
+            'requỉred' => true
+        ]);
+
+        $this->add($email);
     }
 }

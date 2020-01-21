@@ -3,6 +3,9 @@ WELCOM TO MODULE FORM!
 <?php
 $form = $this->form;
 $fullname = $form->get('fullname');
+$hidden = $form->get('hidden_input');
+$age = $form->get('number_input');
+$email = $form->get('email_input');
 $form->prepare();
 ?>
 <div class="row">
@@ -11,6 +14,9 @@ $form->prepare();
             <?= $this->form()->openTag($form); //<form> 
             ?>
             <?= $this->formRow($fullname); ?>
+            <?= $this->formRow($hidden); ?>
+            <?= $this->formRow($age); ?>
+            <?= $this->formRow($email); ?>
             <?= $this->form()->closeTag($form); //</form>
             ?>
         </div>
