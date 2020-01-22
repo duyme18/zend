@@ -221,5 +221,48 @@ class FormElement extends Form
                 ]
             ]
         ]);
+
+        //range
+        $this->add([
+            'name' => 'range',
+            'type' => 'range',
+            'attributes' => [
+                'min' => 5,
+                'max' => 50,
+                'value' => 25,
+                'class' => 'form-control',
+                'id' => 'range'
+            ],
+            'options' => [
+                'label' => "Chọn giá trị: ",
+                'label_attributes' => [
+                    'id' => 'my_range',
+                    'class' => 'control_label'
+                ]
+            ]
+        ]);
+
+        //button reset
+        $this->add([
+            'name' => 'btnReset',
+            'type' => 'button',
+            'attributes' => [
+                'class' => 'btn btn-primary',
+                'type' => 'reset'
+            ],
+            'options' => [
+                'label' => "Reset"
+            ]
+        ]);
+
+        //button submit
+        $this->add([
+            'name' => 'btnSubmit',
+            'type' => 'submit',
+            'attributes' => [
+                'class' => 'btn btn-success',
+                'value' => 'Send'
+            ]
+        ]);
     }
 }

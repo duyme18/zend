@@ -16,6 +16,9 @@ $checkbox = $form->get('checkbox');
 $multiCheckbox = $form->get('multiCheckbox');
 $color = $form->get('color');
 $date = $form->get('date');
+$range = $form->get('range');
+$reset = $form->get('btnReset');
+$submit = $form->get('btnSubmit');
 $form->prepare();
 ?>
 <div class="row">
@@ -38,6 +41,9 @@ $form->prepare();
             <?= $this->formRow($color); ?>
             <br>
             <?= $this->formRow($date); ?>
+             <?= $this->formRow($range); ?>
+             <?= $this->formRow($reset); ?>
+             <?= $this->formRow($submit); ?>
             <?= $this->form()->closeTag($form); //</form>
             ?>
         </div>
