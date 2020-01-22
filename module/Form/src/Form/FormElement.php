@@ -149,7 +149,7 @@ class FormElement extends Form
             ])
             ->setAttributes([
                 'multiple' => true,
-                'class' => 'form-control'
+                'id' => 'file'
             ]);
         $this->add($file);
 
@@ -163,10 +163,29 @@ class FormElement extends Form
         ]);
         $checkbox->setAttributes([
             'id' => 'checkbox',
-        
             'checked' => true
         ]);
 
         $this->add($checkbox);
+
+        $multiCheckbox = new Element\MultiCheckbox('multiCheckbox');
+        $multiCheckbox->setLabel('Chọn sở thích: ');
+        $checkbox->setLabelAttributes([
+            'id' => 'multiCheckbox',
+            'class' => 'control-label'
+        ]);
+        $multiCheckbox->setAttributes([
+            'id' => 'multiCheckbox',
+            'value' => ['bóng đá', 'bóng chuyền'],
+            'style' => 'margin-left: 20px'
+        ]);
+        $multiCheckbox->setValueOptions([
+            'bóng đá' => "Bóng đá",
+            'bóng chuyền' => "Bóng chuyền",
+            'bơi lội' => "Bơi lội",
+            'bóng rổ' => "Bóng rổ"
+        ]);
+
+        $this->add($multiCheckbox);
     }
 }
