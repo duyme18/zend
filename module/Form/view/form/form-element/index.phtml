@@ -14,6 +14,8 @@ $textarea = $form->get('message');
 $file = $form->get('file');
 $checkbox = $form->get('checkbox');
 $multiCheckbox = $form->get('multiCheckbox');
+$color = $form->get('color');
+$date = $form->get('date');
 $form->prepare();
 ?>
 <div class="row">
@@ -30,8 +32,12 @@ $form->prepare();
             <?= $this->formRow($select); ?>
             <?= $this->formRow($textarea); ?>
             <?= $this->formRow($file); ?>
+            <br>
             <?= $this->formRow($checkbox); ?>
             <?= $this->formRow($multiCheckbox); ?>
+            <?= $this->formRow($color); ?>
+            <br>
+            <?= $this->formRow($date); ?>
             <?= $this->form()->closeTag($form); //</form>
             ?>
         </div>

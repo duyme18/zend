@@ -187,5 +187,39 @@ class FormElement extends Form
         ]);
 
         $this->add($multiCheckbox);
+
+        //color
+        $this->add([
+            'name' => 'color',
+            'type' => Element\Color::class,
+            'options' => [
+                'label' => "Chọn màu: ",
+                'label_attributes' => [
+                    'id' => 'color',
+                    'class' => 'control-label'
+                ]
+            ],
+            'attributes' => [
+                'value' => "#ABCEA3"
+            ]
+        ]);
+
+        //date
+
+        $this->add([
+            'name' => 'date',
+            'type' => 'Date',
+            'attributes' => [
+                'class' => 'form-control',
+                'id' => 'birthdate'
+            ],
+            'options' => [
+                'label' => "Chọn ngày sinh: ",
+                'label_attributes' => [
+                    'id' => 'birthdate',
+                    'class' => 'control-label'
+                ]
+            ]
+        ]);
     }
 }
