@@ -19,6 +19,7 @@ $date = $form->get('date');
 $range = $form->get('range');
 $reset = $form->get('btnReset');
 $submit = $form->get('btnSubmit');
+$captcha = $form->get('captcha_image');
 $form->prepare();
 ?>
 <div class="row">
@@ -41,9 +42,10 @@ $form->prepare();
             <?= $this->formRow($color); ?>
             <br>
             <?= $this->formRow($date); ?>
-             <?= $this->formRow($range); ?>
-             <?= $this->formRow($reset); ?>
-             <?= $this->formRow($submit); ?>
+            <?= $this->formRow($range); ?>
+            <?= $this->formRow($reset); ?>
+            <?= $this->formRow($submit); ?>
+            <?= $this->formRow($captcha); ?>
             <?= $this->form()->closeTag($form); //</form>
             ?>
         </div>

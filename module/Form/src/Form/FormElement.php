@@ -264,5 +264,27 @@ class FormElement extends Form
                 'value' => 'Send'
             ]
         ]);
+
+        //captcha image
+        $this->add([
+            'type' => 'captcha',
+            'name' => 'captcha_image',
+            'options' => [
+                'label' => 'Nhập chuỗi bên dưới: ',
+                'captcha' => [
+                    'class' => 'Image',
+                    'imgDir' => 'public/img/captcha',
+                    'imgUrl' => 'img/captcha',
+                    'suffix' => '.png',
+                    'font' => APPLICATION_PATH . "/data/font/Merriweather-Regular.ttf",
+                    'fsize' => 50,
+                    'width' => 400,
+                    'height' => 150,
+                    'dotNoiseLevel' => 200,
+                    'lineNoiseLevel' => 5,
+                    'expiration' => 120 //2 mins
+                ]
+            ]
+        ]);
     }
 }
